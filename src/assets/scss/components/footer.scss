@@ -1,0 +1,116 @@
+.landing-footer {
+  padding: 80px 0 0 0;
+  color: $footer-color;
+  .container {
+    justify-content: space-between;
+  }
+  .logo-marg {
+    margin: 0 0 35px 0;
+  }
+  .footer-title {
+    padding: 10px 0 0 0;
+    font-size: 1.5rem;
+    &-marg {
+      margin: 0 0 40px 0;
+    }
+  }
+  .follow {
+    max-width: 275px;
+    &-discription {
+      line-height: 30px;
+    }
+    &-us h5 {
+      margin: 35px 0 15px 0;
+      font-size: 1.25rem;
+    }
+    &-link {
+      position: relative;
+      display: inline-block;
+      margin: 0 10px 0 0;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #555555;
+      transition: border 200ms;
+      &:hover {
+        border: 1px solid $second-color;
+      }
+      svg {
+        width: 16px;
+        height: 16px;
+        fill: $footer-color;
+        @include absolute-center;
+      }
+    }
+  }
+  .contacts {
+    max-width: 220px;
+    &-list {
+      list-style-type: none;
+      line-height: 24px;
+      li {
+        margin: 24px 0;
+        display: flex;
+        &:nth-child(1) address::before {
+          background-image: url("assets/img/pin.svg");
+        }
+        &:nth-child(2) a::before {
+          background-image: url("assets/img/smartphone.svg");
+        }
+        &:nth-child(3) a::before {
+          background-image: url("assets/img/mail.svg");
+        }
+        &:nth-child(4) a::before {
+          background-image: url("assets/img/world.svg");
+        }
+        a,
+        address {
+          color: $footer-color;
+          font-style: normal;
+          &::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle;
+            margin: 0 14px 0 0;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+  }
+  .popular-tags {
+    max-width: 360px;
+    .tags-wrap {
+      flex-wrap: wrap;
+    }
+    .landing-link {
+      width: auto;
+      min-width: 100px;
+      height: 40px;
+      padding: 0 17px;
+      margin: 0 10px 10px 0;
+      border: 1px solid #555555;
+      border-radius: 0;
+      &::before {
+        border-radius: 0;
+      }
+      &:hover {
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .footer-navigation {
+    margin: 70px 0 0 0;
+    padding: 30px 0;
+    @include gradient();
+    justify-content: center;
+    .navigation li a:hover {
+      color: darken(#fff, 15%);
+    }
+  }
+  .copyright {
+    padding: 30px 0;
+    text-align: center;
+  }
+}

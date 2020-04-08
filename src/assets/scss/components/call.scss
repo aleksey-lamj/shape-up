@@ -1,0 +1,21 @@
+.call {
+    background: url('assets/img/bg-section.jpg') center center no-repeat;
+    background-size: cover;
+    &-subtitle {
+        font-size: 3rem;
+        &::after {
+            display: none;
+        }
+    }
+    &-discription {
+        margin: 80px auto;
+        width: 100%;
+        max-width: 615px;
+        font-size: 1.125rem;
+        text-align: center;
+        line-height: 30px;
+    }
+    &-link {
+        margin: 0 auto;
+    }
+}

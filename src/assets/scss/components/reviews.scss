@@ -1,0 +1,74 @@
+.reviews {
+  background: url("assets/img/bg-section.jpg") 0 0 no-repeat;
+  background-size: cover;
+  &-slider {
+    width: 100%;
+    overflow: hidden;
+    .slider-wrap {
+      justify-content: space-between;
+      transition: transform 1s;
+      margin: 0 -0.1%;
+    }
+    .feedback {
+      background: #222222;
+      flex: 0 0 47%;
+      max-width: 47%;
+      margin: 0 1.5%;
+
+      img {
+        width: 35%;
+        border-radius: 0 40% 40% 0;
+        object-fit: cover;
+      }
+      &-content {
+        width: 100%;
+        margin: 35px 25px;
+      }
+      &-name {
+        font-size: 1.125rem;
+        color: $pref-color;
+      }
+      &-work {
+        display: block;
+        margin: 5px 0 0 0;
+        font-size: 0.625rem;
+      }
+      &-reviews {
+        margin: 40px 0 30px 0;
+        font-size: 0.75rem;
+        color: #fffefe;
+        line-height: 24px;
+      }
+      &-stars {
+        svg {
+          margin: 0 2px;
+          width: 15px;
+          height: 15px;
+          fill: $second-color;
+          &:last-child {
+            fill: transparent;
+            stroke-width: 15px;
+            stroke: $second-color;
+          }
+        }
+      }
+    }
+    .slider--dots {
+      margin: 50px 0 0 0;
+      justify-content: center;
+      .dot {
+        width: 14px;
+        height: 14px;
+        border-radius: 50%;
+        margin: 0 5px;
+        background: #fff;
+        transition: background 300ms;
+        cursor: pointer;
+        &.active {
+          background: $pref-color;
+          cursor: default;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,297 @@
+@media screen and(max-width: $tableWidth) {
+  .slider--button {
+    display: block;
+  }
+  .padding-section {
+    padding: 60px 0;
+  }
+  .about {
+    &-content {
+      width: 55%;
+    }
+    &-video {
+      width: 100%;
+      height: 300px;
+    }
+    &-videos .video-wrap {
+      width: 31%;
+    }
+  }
+  .reviews-slider .feedback img {
+    width: 30%;
+  }
+  .aside {
+    .slider-wrap {
+      margin: 0;
+    }
+    .slider--button {
+      display: block;
+    }
+  }
+  .blog {
+    .slider--item {
+      flex: 0 0 30%;
+      width: 30%;
+      margin: 0 2%;
+      max-width: 100%;
+    }
+    .slider--button {
+      top: 48%;
+      transform: translateY(-47%);
+      &.prev {
+        left: 5px;
+      }
+      &.next {
+        right: 5px;
+      }
+    }
+  }
+ 
+}
+
+@media screen and(max-width: $smTableWidth) {
+  .padding-section {
+    padding: 40px 0;
+  }
+  .header {
+    &--content {
+      .content-title {
+        font-size: 3rem;
+        span {
+          font-size: 2.5rem;
+        }
+      }
+    }
+    .btn-wrap {
+      position: fixed;
+      top: 40px;
+      right: 20px;
+      display: block;
+      z-index: 15;
+    }
+    .navigation {
+      position: fixed;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 14;
+      flex-direction: column;
+      font-size: 3rem;
+      text-align: center;
+      background: rgba(#000, 0.9);
+      transition: top 300ms;
+      li {
+        margin: 10px 0;
+      }
+      &.active {
+        top: 0;
+      }
+    }
+  }
+  .about {
+    .container {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &-content {
+      width: 100%;
+      max-width: 100%;
+    }
+    &-vwrap {
+      margin: 20px 0;
+    }
+    &-video {
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  .trainers-slider .slider--item {
+    flex: 0 0 30%;
+    width: 30%;
+  }
+  .programs {
+    .container {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      .program {
+        width: 45%;
+      }
+    }
+  }
+  .reviews-slider {
+    .feedback {
+      flex: 0 0 90%;
+      max-width: 100%;
+      margin: 0 5%;
+    }
+    .slider--dots {
+      .dot {
+        width: 20px;
+        height: 20px;
+        margin: 0 8px;
+      }
+    }
+  }
+  .pricing {
+    .container {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    &--cart {
+      margin: 5px 0;
+      width: 100%;
+    }
+  }
+  .landing-footer {
+    .container {
+      flex-wrap: wrap;
+    }
+    .follow {
+      max-width: 45%;
+    }
+    .contacts {
+      max-width: 40%;
+    }
+    .popular-tags {
+      max-width: 100%;
+    }
+    .footer-navigation {
+      display: none;
+    }
+  }
+}
+
+@media screen and(max-width: $phoneWidth) {
+  html {
+    font-size: 18px;
+  }
+  .padding-section {
+    padding: 20px 0;
+  }
+  .section-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+  }
+  .landing-link {
+    width: 140px;
+    &.small {
+      width: 100px;
+    }
+  }
+  .header {
+    background-position: 55% center;
+    .navigation {
+      font-size: 2rem;
+    }
+    &--content {
+      .content-title {
+        font-size: 1.6rem;
+        span {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+  .trainers {
+    .slider-wrap {
+      margin: 0;
+    }
+    &-slider .slider--item {
+      flex: 0 0 45%;
+      width: 45%;
+      margin: 0 2.5%;
+    }
+  }
+  .programs .container .program {
+    width: 100%;
+    margin: 15px 0;
+    &-title {
+      margin: 20px 0 0 0;
+    }
+  }
+  .reviews-slider .feedback img {
+    display: none;
+  }
+  .aside {
+    .slider-wrap {
+      margin: 0;
+    }
+    .slider--item {
+      margin: 0 1.6%;
+      flex: 0 0 47%;
+    }
+  }
+  .blog {
+    .container {
+      padding: 0;
+      border: none;
+    }
+    .slider-wrap {
+      margin: 0;
+    }
+    .slider--item {
+      flex: 0 0 95%;
+      width: 95%;
+      margin: 0 2.5%;
+      border: none;
+    }
+  }
+  .call {
+    padding: 20px;
+    &-subtitle {
+      font-size: 2rem;
+    }
+    &-discription {
+      font-size: 1rem;
+      margin: 40px auto;
+    }
+  }
+  .landing-footer {
+    .follow,
+    .contacts {
+      margin: 10px 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@media screen and(max-width: $smPhoneWidth) {
+  html {
+    font-size: 16px;
+  }
+  .header {
+    background-position: 0 0;
+    &--content {
+      .content-title {
+        font-size: 1.8rem;
+        span {
+          font-size: 1.3rem;
+        }
+      }
+      p {
+        font-size: 1.3rem;
+        line-height: 30px;
+      }
+    }
+  }
+
+  .about {
+    &-description {
+      font-size: 1rem;
+    }
+    &-video {
+      height: 200px;
+    }
+  }
+  .reviews-slider .feedback {
+    &-content {
+      margin: 20px;
+    }
+    &-reviews {
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+  }
+}

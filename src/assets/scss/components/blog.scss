@@ -1,0 +1,56 @@
+.blog {
+  background-color: $bg-color;
+  .slider-blog {
+    position: relative;
+    overflow: hidden;
+  }
+  .slider-wrap {
+    justify-content: space-between;
+    transition: transform 400ms;
+  }
+  .slider--item {
+    border: 2px solid #222222;
+    max-width: 260px;
+    flex-direction: column;
+  }
+  &-content {
+    padding: 30px 20px;
+    flex-direction: column;
+  }
+  &-img img {
+    width: 100%;
+  }
+  &-theme {
+    margin: 0 0 15px 0;
+    font-size: 0.75rem;
+    color: $second-color;
+  }
+  &-title {
+    font-size: 1.125rem;
+  }
+  &-discription {
+    margin: 28px 0 18px 0;
+    font-size: 0.875rem;
+    line-height: 24px;
+  }
+  &-link {
+    font-size: 0.875rem;
+    color: $second-color;
+  }
+  &-footer {
+    margin: 30px 0 0 0;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.875rem;
+    color: $pref-color;
+    .like-wrap {
+      align-items: center;
+      svg {
+        margin: 0 0 0 4px;
+        width: 16px;
+        height: 16px;
+        fill: $pref-color;
+      }
+    }
+  }
+}

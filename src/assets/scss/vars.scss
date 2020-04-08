@@ -1,0 +1,21 @@
+$pref-color: #12c2e9;
+$second-color: #f80759;
+$bg-color: #161616;
+$footer-color: #bdc3c7;
+
+// $desktopWidth: 1200px;
+$tableWidth: 992px;
+$smTableWidth: 768px;
+$phoneWidth: 480px;
+$smPhoneWidth: 320px;
+
+@mixin absolute-center() {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@mixin gradient() {
+    background-image: linear-gradient(to top, #e10100, #f80759);
+    background-blend-mode: multiply;
+}

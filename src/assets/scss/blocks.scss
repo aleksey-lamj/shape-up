@@ -1,0 +1,121 @@
+.container {
+  width: 100%;
+  max-width: 1160px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.padding-section {
+  padding: 80px 0;
+}
+.landing-link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid $second-color;
+  z-index: 1;
+  transition: border 200ms;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border-radius: 5px;
+    @include gradient();
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 300ms;
+  }
+  &.start-gradient {
+    border: none;
+    &::before {
+      opacity: 1;
+    }
+    &:hover {
+      border: 1px solid $second-color;
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+  &:hover {
+    border: none;
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &.small {
+    width: 140px;
+    font-size: 0.75rem;
+    border: 2px solid $second-color;
+    &:hover {
+      border: none;
+    }
+  }
+}
+.section-title {
+  color: $pref-color;
+  font-size: 1.2rem;
+  text-align: center;
+  &.left-title {
+    text-align: left;
+  }
+}
+.section-subtitle {
+  display: block;
+  margin: 15px 0 0 0;
+  font-size: 1.85rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  &.left-subtitle {
+    text-align: left;
+  }
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    margin: 30px auto 50px auto;
+    @include gradient();
+  }
+  &.left-line::after {
+    margin: 30px 0 50px 0;
+  }
+}
+.slider--button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  height: 100%;
+  display: none;
+  svg {
+    width: 30px;
+    height: 30px;
+    fill: $pref-color;
+    &:hover {
+      fill: darken($pref-color, 5%);
+    }
+  }
+  &.prev {
+    left: 10px;
+  }
+  &.next {
+    right: 10px;
+  }
+  &.hide {
+    display: none;
+  }
+}

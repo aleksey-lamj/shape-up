@@ -1,0 +1,81 @@
+.about {
+  .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-content {
+    width: 45%;
+    max-width: 500px;
+  }
+  .abstract-title {
+    font-size: 1.375rem;
+  }
+  &-description {
+    margin: 35px 0;
+    font-size: 0.8rem;
+    line-height: 26px;
+  }
+  &-link {
+    font-size: 0.8rem;
+    color: $second-color;
+    transition: color 300ms;
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-vwrap {
+    margin: 10px;
+  }
+  &-video {
+    position: relative;
+    height: 400px;
+    width: 560px;
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+    }
+    &.poster {
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $second-color url("assets/img/poster-video.jpg") no-repeat;
+        background-size: cover;
+        z-index: 2;
+      }
+      &::after {
+        content: "";
+        @include absolute-center();
+        width: 53px;
+        height: 53px;
+        background: url("assets/img/play.svg") center no-repeat;
+        z-index: 3;
+      }
+      iframe {
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+  &-videos {
+      margin: 20px 0 0 0;
+      justify-content: space-between;
+      .video-wrap {
+          width: 100%;
+          max-width: 170px;
+          cursor: pointer;
+          object-fit: cover;
+          &--active {
+              border: 2px solid $second-color;
+          }
+      }
+  }
+}
