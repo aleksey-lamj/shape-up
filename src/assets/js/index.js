@@ -1,5 +1,8 @@
+import '@babel/polyfill';
+import './polyfill';
 import Slider from './slider';
 import '../../../node_modules/svgxuse/svgxuse';
+
 
 (() => {
     const iframe = document.querySelector('.about-video iframe')
